@@ -6,24 +6,24 @@ import unittest
 class TestCheck(unittest.TestCase):
 
     def setUp(self):
-        self.mail_string="""Return-Path: <double-bounce@mail.emiau.com.br>
-X-Original-To: bounces@emiau.com.br
-Delivered-To: bounces@emiau.com.br
-Received: by mail.emiau.com.br (Postfix)
+        self.mail_string="""Return-Path: <double-bounce@mail.example.com.br>
+X-Original-To: bounces@mail.example.com.br
+Delivered-To: bounces@mail.example.com.br
+Received: by mail.example.com.br (Postfix)
     id 3BFAC2773E; Wed,  3 Dec 2014 17:43:06 -0200 (BRST)
 Date: Wed,  3 Dec 2014 17:43:06 -0200 (BRST)
-From: MAILER-DAEMON@mail.emiau.com.br (Mail Delivery System)
+From: MAILER-DAEMON@mail.example.com.br(Mail Delivery System)
 Subject: Postmaster Copy: Undelivered Mail
-To: bounces@emiau.com.br
+To: bounces@mail.example.com.br
 Auto-Submitted: auto-generated
 MIME-Version: 1.0
 Content-Type: multipart/report; report-type=delivery-status;
-    boundary="F29B627500.1417635786/mail.emiau.com.br"
-Message-Id: <20141203194306.3BFAC2773E@mail.emiau.com.br>
+    boundary="F29B627500.1417635786/mail.example.com.br"
+Message-Id: <20141203194306.3BFAC2773E@mail.example.com.br>
 
 This is a MIME-encapsulated message.
 
---F29B627500.1417635786/mail.emiau.com.br
+--F29B627500.1417635786/mail.example.com.br
 Content-Description: Notification
 Content-Type: text/plain; charset=us-ascii
 
@@ -32,11 +32,11 @@ Content-Type: text/plain; charset=us-ascii
     found. Name service error for name=setentaequatroumdoistresquatro.com.br
     type=A: Host not found
 
---F29B627500.1417635786/mail.emiau.com.br
+--F29B627500.1417635786/mail.example.com.br
 Content-Description: Delivery report
 Content-Type: message/delivery-status
 
-Reporting-MTA: dns; mail.emiau.com.br
+Reporting-MTA: dns; mail.example.com.br
 X-Postfix-Queue-ID: F29B627500
 X-Postfix-Sender: rfc822; marly@soeta.com.br
 Arrival-Date: Wed,  3 Dec 2014 17:43:05 -0200 (BRST)
@@ -48,24 +48,24 @@ Status: 5.4.4
 Diagnostic-Code: X-Postfix; Host or domain name not found. Name service error
     for name=setentaequatroumdoistresquatro.com.br type=A: Host not found
 
---F29B627500.1417635786/mail.emiau.com.br
+--F29B627500.1417635786/mail.example.com.br
 Content-Description: Undelivered Message Headers
 Content-Type: text/rfc822-headers
 
 Return-Path: <marly@soeta.com.br>
 Received: from [127.0.0.1] (unknown [10.0.0.70])
-    by mail.emiau.com.br (Postfix) with ESMTP id F29B627500
+    by mail.example.com.br (Postfix) with ESMTP id F29B627500
     for <thebounced@setentaequatroumdoistresquatro.com.br>; Wed,  3 Dec 2014 17:43:05 -0200 (BRST)
 Content-Type: multipart/mixed; boundary="===============7736281935899896060=="
 MIME-Version: 1.0
-From: <marly@soeta.com.br>
+From: <teste@mail.example.com.br>
 To: thebounced@setentaequatroumdoistresquatro.com.br
 Date: Wed, 03 Dec 2014 17:43:05 -0200
 Subject: asdasdasd
 MID: 1690872
-Message-Id: <20141203194305.F29B627500@mail.emiau.com.br>
+Message-Id: <20141203194305.F29B627500@mail.example.com.br>
 
---F29B627500.1417635786/mail.emiau.com.br--
+--F29B627500.1417635786/mail.example.com.br--
 """
 
     def test_bouncecheck(self):
